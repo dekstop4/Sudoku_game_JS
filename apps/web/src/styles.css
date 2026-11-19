@@ -1,0 +1,76 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #172033;
+  background: #f5f7fb;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: #fff;
+  border-bottom: 1px solid #dfe5ef;
+}
+
+.header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header a,
+.button {
+  color: #2458a6;
+  text-decoration: none;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.page {
+  max-width: 760px;
+  margin: 48px auto;
+  padding: 0 24px;
+}
+
+.card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #dfe5ef;
+  border-radius: 10px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #fff;
+  border: 1px solid #2458a6;
+  border-radius: 6px;
+}
+
+.sudoku-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 280px;
+  background: #fff;
+  border: 2px dashed #aeb8c7;
+  border-radius: 10px;
+  text-align: center;
+}
