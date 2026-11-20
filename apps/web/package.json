@@ -1,0 +1,20 @@
+{
+  "name": "@sudoku/app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "predev": "npm run build --workspace @sudoku/ui",
+    "prebuild": "npm run build --workspace @sudoku/ui",
+    "build": "tsc --noEmit && vite build",
+    "dev": "vite --host 127.0.0.1",
+    "lint": "eslint src test",
+    "lint:fix": "eslint src test --fix",
+    "pretest": "npm run build --workspace @sudoku/ui",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@sudoku/ui": "*"
+  }
+}
