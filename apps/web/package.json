@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "npm run build --workspace @sudoku/ui",
     "prebuild": "npm run build --workspace @sudoku/ui",
     "build": "tsc --noEmit && vite build",
     "dev": "vite --host 127.0.0.1",
