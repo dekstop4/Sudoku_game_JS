@@ -65,12 +65,40 @@ body {
   border-radius: 6px;
 }
 
-.sudoku-placeholder {
+.sudoku-grid {
   display: grid;
-  place-items: center;
-  min-height: 280px;
-  background: #fff;
-  border: 2px dashed #aeb8c7;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  max-width: 450px;
+  margin-bottom: 20px;
+  border: 2px solid #172033;
   border-radius: 10px;
+  overflow: hidden;
+}
+
+.sudoku-cell {
+  min-width: 0;
+  aspect-ratio: 1;
+  border: 1px solid #dfe5ef;
   text-align: center;
+  font-size: 20px;
+}
+
+.sudoku-cell:nth-child(3n) {
+  border-right: 2px solid #172033;
+}
+
+.sudoku-cell:nth-child(n + 19):nth-child(-n + 27),
+.sudoku-cell:nth-child(n + 46):nth-child(-n + 54) {
+  border-bottom: 2px solid #172033;
+}
+
+.sudoku-cell-given {
+  background: #e8edf5;
+  color: #172033;
+  font-weight: 700;
+}
+
+.sudoku-cell-error {
+  background: #fee2e2;
+  color: #b91c1c;
 }

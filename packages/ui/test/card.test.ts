@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+
 import { Card } from '../src/card'
 
 describe('Card', () => {
