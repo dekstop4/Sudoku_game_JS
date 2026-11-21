@@ -1,0 +1,104 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #172033;
+  background: #f5f7fb;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: #fff;
+  border-bottom: 1px solid #dfe5ef;
+}
+
+.header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header a,
+.button {
+  color: #2458a6;
+  text-decoration: none;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.page {
+  max-width: 760px;
+  margin: 48px auto;
+  padding: 0 24px;
+}
+
+.card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #dfe5ef;
+  border-radius: 10px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #fff;
+  border: 1px solid #2458a6;
+  border-radius: 6px;
+}
+
+.sudoku-grid {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  max-width: 450px;
+  margin-bottom: 20px;
+  border: 2px solid #172033;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sudoku-cell {
+  min-width: 0;
+  aspect-ratio: 1;
+  border: 1px solid #dfe5ef;
+  text-align: center;
+  font-size: 20px;
+}
+
+.sudoku-cell:nth-child(3n) {
+  border-right: 2px solid #172033;
+}
+
+.sudoku-cell:nth-child(n + 19):nth-child(-n + 27),
+.sudoku-cell:nth-child(n + 46):nth-child(-n + 54) {
+  border-bottom: 2px solid #172033;
+}
+
+.sudoku-cell-given {
+  background: #e8edf5;
+  color: #172033;
+  font-weight: 700;
+}
+
+.sudoku-cell-error {
+  background: #fee2e2;
+  color: #b91c1c;
+}
